@@ -20,7 +20,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-
+  
   const getUser = async () => {
     const response = await fetch(`http://localhost:3001/users/${userId}`, {
       method: "GET",
@@ -28,7 +28,6 @@ const UserWidget = ({ userId, picturePath }) => {
     });
     const data = await response.json();
     setUser(data);
-    console.log("%cUserWidget.jsx line:31 user", "color: #007acc;", user);
   };
 
   useEffect(() => {
@@ -114,7 +113,7 @@ const UserWidget = ({ userId, picturePath }) => {
         </Typography>
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
-            <img src="./assets/twitter.png" alt="twitter" />
+            <img src="../assets/twitter.png" alt="twitter" />
             <Box>
               <Typography fontWeight="500" color={main}>
                 Twitter
@@ -126,7 +125,7 @@ const UserWidget = ({ userId, picturePath }) => {
         </FlexBetween>
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="./assets/linkedin.png" alt="linkedin" />
+            <img src="../assets/linkedin.png" alt="linkedin" />
             <Box>
               <Typography fontWeight="500" color={main}>
                 Linkedin
