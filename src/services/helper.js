@@ -1,0 +1,1 @@
+export const BASE_URL = "https://sociopedia-8s7c.onrender.com"
